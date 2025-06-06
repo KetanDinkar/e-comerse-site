@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisan Market - Handmade Goods</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Artisan Market</div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#shop" class="nav-link">Shop</a>
+                <a href="#artisans" class="nav-link">Artisans</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <div class="search-icon" id="searchToggle">🔍</div>
+                <div class="cart-icon" id="cartIcon">
+                    <span class="cart-count">0</span>
+                    🛒
+                </div>
+            </div>
+        </nav>
+        <div class="search-bar" id="searchBar">
+            <input type="text" id="searchInput" placeholder="Search products...">
+            <button id="searchBtn">Search</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Page -->
+        <div id="home-page" class="page active">
+            <section id="hero">
+                <div class="hero-content">
+                    <h1>Discover Unique Handmade Treasures</h1>
+                    <p>Support local artisans and find one-of-a-kind pieces crafted with love</p>
+                    <a href="#shop" class="cta-button nav-link">Shop Now</a>
+                </div>
+            </section>
+
+            <section id="featured" class="container">
+                <h2>Featured Products</h2>
+                <div class="products-grid" id="featuredProducts">
+                    <!-- Products will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <section id="categories" class="container">
+                <h2>Shop by Category</h2>
+                <div class="category-grid">
+                    <div class="category-card" data-category="jewelry">
+                        <img src="https://images.pexels.com/photos/248077/pexels-photo-248077.jpeg" alt="Jewelry">
+                        <h3>Jewelry</h3>
+                        <p>Handcrafted accessories</p>
+                    </div>
+                    <div class="category-card" data-category="pottery">
+                        <img src="https://images.pexels.com/photos/2162938/pexels-photo-2162938.jpeg" alt="Pottery">
+                        <h3>Pottery</h3>
+                        <p>Ceramic masterpieces</p>
+                    </div>
+                    <div class="category-card" data-category="textiles">
+                        <img src="https://images.pexels.com/photos/4622424/pexels-photo-4622424.jpeg" alt="Textiles">
+                        <h3>Textiles</h3>
+                        <p>Woven with tradition</p>
+                    </div>
+                    <div class="category-card" data-category="woodwork">
+                        <img src="https://images.pexels.com/photos/6431298/pexels-photo-6431298.jpeg" alt="Woodwork">
+                        <h3>Woodwork</h3>
+                        <p>Carved perfection</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Shop Page -->
+        <div id="shop-page" class="page">
+            <section class="page-header">
+                <div class="container">
+                    <h1>Shop All Products</h1>
+                    <p>Discover our complete collection of handmade treasures</p>
+                </div>
+            </section>
+            
+            <section class="container">
+                <div class="shop-filters">
+                    <div class="filter-group">
+                        <label>Category:</label>
+                        <select id="categoryFilter">
+                            <option value="all">All Categories</option>
+                            <option value="jewelry">Jewelry</option>
+                            <option value="pottery">Pottery</option>
+                            <option value="textiles">Textiles</option>
+                            <option value="woodwork">Woodwork</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Sort by:</label>
+                        <select id="sortFilter">
+                            <option value="name">Name</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="products-grid" id="shopProducts">
+                    <!-- Products will be populated by JavaScript -->
+                </div>
+            </section>
+        </div>
+
+        <!-- Artisans Page -->
+        <div id="artisans-page" class="page">
+            <section class="page-header">
+                <div class="container">
+                    <h1>Meet Our Artisans</h1>
+                    <p>The talented craftspeople behind our beautiful products</p>
+                </div>
+            </section>
+            
+            <section class="container">
+                <div class="artisans-grid" id="artisansGrid">
+                    <!-- Artisans will be populated by JavaScript -->
+                </div>
+            </section>
+        </div>
+
+        <!-- About Page -->
+        <div id="about-page" class="page">
+            <section class="page-header">
+                <div class="container">
+                    <h1>About Artisan Market</h1>
+                    <p>Connecting artisans with art lovers worldwide</p>
+                </div>
+            </section>
+            
+            <section class="container">
+                <div class="about-content">
+                    <div class="about-section">
+                        <h2>Our Story</h2>
+                        <p>Founded in 2020, Artisan Market began as a small initiative to support local craftspeople during challenging times. Today, we've grown into a thriving marketplace that connects talented artisans with customers who appreciate the beauty and quality of handmade goods.</p>
+                    </div>
+                    
+                    <div class="about-section">
+                        <h2>Our Mission</h2>
+                        <p>We believe that every handmade piece tells a story. Our mission is to preserve traditional crafts while providing artisans with a platform to showcase their skills and earn a sustainable living from their passion.</p>
+                    </div>
+                    
+                    <div class="about-section">
+                        <h2>Quality Promise</h2>
+                        <p>Every product on our platform is carefully curated and quality-checked. We work directly with artisans to ensure that each piece meets our high standards for craftsmanship and authenticity.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact-page" class="page">
+            <section class="page-header">
+                <div class="container">
+                    <h1>Contact Us</h1>
+                    <p>We'd love to hear from you</p>
+                </div>
+            </section>
+            
+            <section class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <div class="contact-item">
+                            <strong>Email:</strong> ketandinlar222@gmail.com
+                        </div>
+                        <div class="contact-item">
+                            <strong>Phone:</strong> +91 1234 056789
+                        </div>
+                        <div class="contact-item">
+                            <strong>Address:</strong> 123 Craft Street, Mumbai, Maharashtra 400001
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <h3>Send us a Message</h3>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="text" placeholder="Subject" required>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <!-- Product Modal -->
+        <div id="productModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <div id="modalContent">
+                    <!-- Product details will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Sidebar -->
+        <div id="cart" class="cart-sidebar">
+            <div class="cart-header">
+                <h3>Shopping Cart</h3>
+                <button id="closeCart">×</button>
+            </div>
+            <div id="cartItems" class="cart-items">
+                <!-- Cart items will be populated by JavaScript -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    Total: <span id="cartTotal">₹0.00</span>
+                </div>
+                <button class="checkout-button" id="checkoutBtn">Proceed to Checkout</button>
+            </div>
+        </div>
+
+        <!-- Checkout Modal -->
+        <div id="checkoutModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeCheckoutModal">&times;</span>
+                <div class="checkout-content">
+                    <h2>Checkout</h2>
+                    <form id="checkoutForm">
+                        <div class="form-section">
+                            <h3>Shipping Information</h3>
+                            <input type="text" placeholder="Full Name" required>
+                            <input type="email" placeholder="Email" required>
+                            <input type="tel" placeholder="Phone Number" required>
+                            <textarea placeholder="Address" required></textarea>
+                            <input type="text" placeholder="City" required>
+                            <input type="text" placeholder="Postal Code" required>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Payment Method</h3>
+                            <div class="payment-options">
+                                <label><input type="radio" name="payment" value="cod" checked> Cash on Delivery</label>
+                                <label><input type="radio" name="payment" value="card"> Credit/Debit Card</label>
+                                <label><input type="radio" name="payment" value="upi"> UPI</label>
+                            </div>
+                        </div>
+                        
+                        <div class="order-summary">
+                            <h3>Order Summary</h3>
+                            <div id="checkoutItems"></div>
+                            <div class="checkout-total">
+                                <strong>Total: <span id="checkoutTotal">₹0.00</span></strong>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="place-order-btn">Place Order</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content container">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Artisan Market connects talented craftspeople with customers who appreciate handmade quality and authentic craftsmanship.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#shop" class="nav-link">Shop</a></li>
+                    <li><a href="#artisans" class="nav-link">Artisans</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <form id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Artisan Market. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
